@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import Map from '../Map/Map';
+import MapDisplay from '../Map/MapDisplay';
 
 export default function Home() {
     return (
@@ -11,7 +11,7 @@ export default function Home() {
                 </p>
             </header>
             <p>Here is a map:</p>
-            <Map></Map>
+            <MapDisplay />
         </div>
     );
 }
