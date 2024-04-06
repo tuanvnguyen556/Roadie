@@ -7,8 +7,8 @@ const mapContainerStyle = {
     height: '100vh',
 };
 const center = {
-    lat: 7.2905715, // default latitude
-    lng: 80.6337262, // default longitude
+    lat: 37.7455675, // default latitude
+    lng: -122.4473427, // default longitude
 };
 
 function MapDisplay() {
@@ -16,6 +16,7 @@ function MapDisplay() {
         googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
         libraries,
     });
+
 
     if (loadError) {
         return <div>Error loading maps</div>;
