@@ -34,7 +34,7 @@ export default function ChakraBasic() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
       <>
-      <div class="chakra">
+      <div className="chakra">
         <Button onClick={onOpen}>Open Modal</Button>
   
         <Modal isOpen={isOpen} onClose={onClose}>
