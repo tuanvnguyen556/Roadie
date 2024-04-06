@@ -11,8 +11,12 @@ export default function Home() {
                 </p>
             </header>
             <p>Here is a map:</p>
-            <MapDisplay />
-            <ChakraBasic/>
+            <div className="sections">
+                <ChakraBasic/>
+                <MapDisplay /> 
+            </div>
+            
+            
            
         </div>
     );
