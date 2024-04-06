@@ -1,23 +1,42 @@
-"use client";
-
 import React from 'react';
-import {
-    APIProvider,
-    Map
-} from "@vis.gl/react-google-maps";
+import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 
-export default function MapDisplay() {
+const libraries = ['places'];
+const mapContainerStyle = {
+    width: '100vw',
+    height: '100vh',
+};
+const center = {
+    lat: 7.2905715, // default latitude
+    lng: 80.6337262, // default longitude
+};
+
+function MapDisplay() {
+    const { isLoaded, loadError } = useLoadScript({
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+        libraries,
+    });
+
+    if (loadError) {
+        return <div>Error loading maps</div>;
+    }
+
+    if (!isLoaded) {
+        return <div>Loading maps</div>;
+    }
+
     return (
-        <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
-            <div style={{ height: "100vh", width: "100%" }}>
-                <Map
-                    interactive={true}
-                    draggable={true} // Set draggable to true
-                    zoom={9}
-                    center={{ lat: 37.7749, lng: -122.4194 }}
-                >
-                </Map>
-            </div>
-        </APIProvider>
+        <div className="Map">
+            <GoogleMap
+                mapContainerStyle={mapContainerStyle}
+                zoom={10}
+                center={center}
+            >
+                <Marker position={center} />
+            </GoogleMap>
+        </div>
+
     );
 }
+
+export default MapDisplay;
