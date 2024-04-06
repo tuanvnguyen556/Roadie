@@ -25,16 +25,15 @@ import {
 
 export default function ModalInfo(props) {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const DummyData = ["Starbucks", "In-N-Out"]
     return (
       <>
       <div className="chakra">
-        <Button onClick={onOpen}>{props.data}</Button>
+        <Button onClick={onOpen}>{props.data["name"]}</Button>
   
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
+            <ModalHeader>{props.data["address"]}</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               {/* <Lorem count={2} /> */}
