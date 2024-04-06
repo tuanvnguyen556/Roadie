@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 import MapDisplay from '../Map/MapDisplay';
-
+import ChakraBasic from '../ChakraBasic/ChakraBasic';
 export default function Home() {
     return (
         <div className="Home">
@@ -11,7 +11,13 @@ export default function Home() {
                 </p>
             </header>
             <p>Here is a map:</p>
-            <MapDisplay />
+            <div className="sections">
+                <ChakraBasic/>
+                <MapDisplay /> 
+            </div>
+            
+            
+           
         </div>
     );
 }
