@@ -1,4 +1,5 @@
 import React from 'react';
+import "./ChakraBasic.css"
 import {
     Modal,
     ModalOverlay,
@@ -33,6 +34,7 @@ export default function ChakraBasic() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
       <>
+      <div class="chakra">
         <Button onClick={onOpen}>Open Modal</Button>
   
         <Modal isOpen={isOpen} onClose={onClose}>
@@ -78,6 +80,7 @@ export default function ChakraBasic() {
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
+      </div>
       </>
     )
   }
