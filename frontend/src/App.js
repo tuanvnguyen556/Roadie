@@ -1,10 +1,9 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ChakraProvider } from '@chakra-ui/react'
 import './App.css';
 
 import Home from './components/Home/Home';
-import Map from './components/Map/Map';
 
 function App() {
   return (
@@ -16,9 +15,8 @@ function App() {
           </Routes>
         </BrowserRouter>
       </ChakraProvider>
-      
+
     </div>
-  );
   );
 }
 
