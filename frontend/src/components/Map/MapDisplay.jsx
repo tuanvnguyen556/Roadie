@@ -3,6 +3,7 @@
 import React from 'react';
 import {
     APIProvider,
+    AdvancedMarkerContext,
     Map
 } from "@vis.gl/react-google-maps";
 
@@ -16,6 +17,7 @@ export default function MapDisplay() {
                     zoom={9}
                     center={{ lat: 37.7749, lng: -122.4194 }}
                 >
+                    
                 </Map>
             </div>
         </APIProvider>
