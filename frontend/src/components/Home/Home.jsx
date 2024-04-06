@@ -6,18 +6,15 @@ export default function Home() {
     return (
         <div className="Home">
             <header className="Home-header">
-                <p>
-                    Welcome to the Home page!
-                </p>
+               <h1>ROADIE</h1>
             </header>
-            <p>Here is a map:</p>
             <div className="sections">
-                <ChakraBasic/>
-                <MapDisplay /> 
+                <ChakraBasic />
+                <MapDisplay />
             </div>
-            
-            
-           
+
+
+
         </div>
     );
 }
